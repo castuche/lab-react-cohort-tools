@@ -4,8 +4,19 @@ import {useParams,Link} from 'react-router-dom';
 
 function StudentDetailsPage() {
 
-  const studentId = useParams();
+  const {studentId} = useParams();
   const studentProfile = studentsData.find((student) => student._id === studentId);
+
+  // function ProjectDetailsPage(props) {
+  //   const { projectId } = useParams();
+  //   console.log("projectId", projectId);
+   
+  //   // Method .find() returns the first found matching element,
+  //   // or `null` if no matching element is found.
+  //   const foundProject = props.projects.find((oneProject) => {     //  <== ADD
+  //     return oneProject._id === projectId;
+  //   });
+
 
   return (
     <div className="StudentDetailsPage bg-gray-100 py-6 px-4 border-2 border-fuchsia-500 m-2">
